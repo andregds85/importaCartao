@@ -7,8 +7,8 @@
                 <h2>Macros</h2>
             </div>
             <div class="pull-right">
-                @can('pacientes-create')
-                <a class="btn btn-success" href="{{ route('macros.create') }}"> Nova Macro</a>
+                @can('cns-create')
+                <a class="btn btn-success" href="{{ route('cns.create') }}"> Nova Macro</a>
                 @endcan
             </div>
 
@@ -26,12 +26,12 @@
     <table class="table table-bordered">
         <tr>
             <th>id</th>
-            <th>nome</th>
+            <th>cns</th>
         </tr>
-	    @foreach ($macros as $macro)
+	    @foreach ($cns as $cn)
 	    <tr>
-           <td>{{ $macro->id }}</td>
-           <td>{{ $macro->nome }}</td>
+           <td>{{ $cn->id }}</td>
+           <td>{{ $cn->cns }}</td>
         </tr>
 	    @endforeach
     </table>
@@ -39,8 +39,8 @@
 
 
 
-    {!! $macros->links() !!}
-        {!! $macros->links() !!}
+    {!! $cns->links() !!}
+        {!! $cns->links() !!}
 
 
 <p class="text-center text-primary"><small>Macro</small></p>

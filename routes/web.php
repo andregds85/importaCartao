@@ -10,7 +10,7 @@ use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\soudohospital;
 use App\Http\Controllers\MapasController;
-use App\Http\Controllers\MacroController;
+use App\Http\Controllers\CnsController;
 use App\Http\Controllers\ManualController;
 
 
@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
     Route::resource('categorias', CategoriaController::class);
-    Route::resource('macros', MacroController::class);
+    Route::resource('cns', CnsController::class);
     Route::resource('pacientes', PacienteController::class);
     Route::resource('hospital', HospitalController::class);
     Route::resource('soudohospital', soudohospital::class);
