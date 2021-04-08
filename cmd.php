@@ -38,6 +38,12 @@ Exportar CSV e EXCEL
 
 
 
+DB::statement('drop table users');
+
+
+
+CODIGO DO COVID
+303010223
 
 
 

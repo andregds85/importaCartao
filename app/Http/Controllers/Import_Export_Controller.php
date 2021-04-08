@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Exports\ExportUsers;
-use App\Imports\ImportUsers;
+use App\Exports\ExportCns;
+use App\Imports\ImportCns;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -18,7 +18,6 @@ class Import_Export_Controller extends Controller
          $this->middleware('permission:arquivo-delete', ['only' => ['destroy']]);
     }
 
-
     public function importExport()
     {
        return view('import');
@@ -26,12 +25,12 @@ class Import_Export_Controller extends Controller
 
     public function export()
     {
-        return Excel::download(new ExportUsers, 'users.xlsx');
+        return Excel::download(new ExportCns, 'Cns.xlsx');
     }
 
     public function import()
     {
-        Excel::import(new ImportUsers, request()->file('file'));
+        Excel::import(new ImportCns, request()->file('file'));
 
         return back();
     }

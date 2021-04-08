@@ -43,14 +43,10 @@ class CnsController extends Controller
         return redirect()->route('cns.index')
                         ->with('Sucesso','cns criada com  Sucesso.');
     }
-
-
       public function show()
     {
 
-
     }
-
     public function edit(Macro $cns)
     {
         return view('cns.editar',compact('cns'));
