@@ -34,13 +34,7 @@ Exportar CSV e EXCEL
 <li><a class="nav-link" href="{{ url('https://websolutionstuff.com/post/laravel-8-import-export-csv-excel-file-example
 ') }}">Exportar CSV</a></li>
 
-
-
-
-
 DB::statement('drop table users');
-
-
 
 CODIGO DO COVID
 303010223
@@ -60,69 +54,4 @@ Layouts 4       Administrador
 
 php artisan make:model administrador -m       --
 
-
-
 php artisan make:controller admController --resource
-
-
-
-
-
-Permission 
-
-           'role-list',
-           'role-create',
-           'role-edit',
-           'role-delete',
-           'categoria-list',
-           'categoria-create',
-           'categoria-edit',
-           'categoria-delete',
-           'pacientes-list',
-           'pacientes-create',
-           'pacientes-edit',
-           'pacientes-delete',
-           'arquivo-list',
-           'arquivo-create',
-           'arquivo-edit',
-           'arquivo-delete',
-           'unidadHosp-list',
-           'unidadHosp-create',
-           'unidadHosp-edit',
-           'unidadHosp-delete',
-           'admin-list',
-           'admin-create',
-           'admin-edit',
-           'admin-delete'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-id
-categorias_id
-solicitacao
-cns
-nomedousuario
-municipio
-datasolicitacao
-unidadedesejada
-codigo
-observacao1
-observacao2
-observacao3
-observacao4
-observacao5
-statusSolicitacao
-created_at
-updated_at

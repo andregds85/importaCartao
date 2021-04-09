@@ -6,22 +6,27 @@
             <div class="pull-left">
                 <h2>CNS</h2>
             </div>
-            <div class="pull-right">
-                @can('cns-create')
-                <a class="btn btn-success" href="{{ route('cns.create') }}"> Nova Macro</a>
-                @endcan
-            </div>
+
 
         </div>
     </div>
+
+    <div class="row">
+    <div class="col-lg-12 margin-tb">
+        <div class="pull-left">
+            <h2>Apagar</h2>
+        </div>
+        <p class="card-text">
+        <a class="nav-link" href="{{ url('') }}">Apagar Dados</a>
+       </p>
+   </div>
+ </div>
 
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
         </div>
     @endif
-
-
 
     <table class="table table-bordered">
         <tr>

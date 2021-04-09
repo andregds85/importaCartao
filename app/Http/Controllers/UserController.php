@@ -13,7 +13,6 @@ use Illuminate\Support\Arr;
 class UserController extends Controller
 {
    
-  
     function __construct()
     {
          $this->middleware('permission:role-list|role-create|role-edit|role-delete', ['only' => ['index','store']]);
@@ -21,8 +20,7 @@ class UserController extends Controller
          $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:role-delete', ['only' => ['destroy']]);
     }
-   
-    
+       
      public function index(Request $request)
     {
         $data = User::orderBy('id','DESC')->paginate(5);
@@ -30,14 +28,12 @@ class UserController extends Controller
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
     
-
     public function create()
     {
         $roles = Role::pluck('name','name')->all();
         return view('users.create',compact('roles'));
     }
     
-
     public function store(Request $request)
     {
         $this->validate($request, [

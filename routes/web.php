@@ -21,14 +21,14 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('cns', CnsController::class);
-    Route::resource('delete', DeleteController::class);
-    Route::resource('codigo', DeleteController::class);
+    Route::resource('dados', DeleteController::class);
 
 
+
+   
     Route::get('import_export', 'App\Http\Controllers\Import_Export_Controller@importExport');
     Route::post('ImportCns', 'App\Http\Controllers\Import_Export_Controller@import');
     Route::get('export', 'App\Http\Controllers\Import_Export_Controller@export');
-
 });
 
 

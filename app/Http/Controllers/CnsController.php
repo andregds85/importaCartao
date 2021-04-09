@@ -18,7 +18,6 @@ class CnsController extends Controller
          $this->middleware('permission:role-delete', ['only' => ['destroy']]);
     }
  
-
     public function index()
     {
        
@@ -26,7 +25,6 @@ class CnsController extends Controller
     return view('cns.index',compact('cns'));
     }
     
-
     public function create()
     {
         return view('cns.cadastrar');
@@ -43,10 +41,13 @@ class CnsController extends Controller
         return redirect()->route('cns.index')
                         ->with('Sucesso','cns criada com  Sucesso.');
     }
-      public function show()
-    {
+   
 
+    public function show()
+    {
+        return view('cns.dados');
     }
+
     public function edit(Macro $cns)
     {
         return view('cns.editar',compact('cns'));
@@ -63,13 +64,14 @@ class CnsController extends Controller
         return redirect()->route('cns.index')
                         ->with('Sucesso','Cns Atualizada com Sucesso');
     }
-
+   
     public function destroy(Cns $cns)
     {
         $cns->delete();
         return redirect()->route('cns.index')
                         ->with('Sucesso','cns deletada com Sucesso');
     }
+
 
 
 }
