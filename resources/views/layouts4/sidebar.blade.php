@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-light bg-light">
     <a href="{{ route('home') }}" class="brand-link">
         <img src="img/logo_menor.png"
              alt="{{ config('app.name') }} Logo"

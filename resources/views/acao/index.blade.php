@@ -1,17 +1,26 @@
 @extends('layouts4.app')
 @section('content')
 
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Ação</h2>
-            </div>
-
-
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
         </div>
-    </div>
+    @endif
 
-   
+    <?php
+    use App\Models\Cns;
+    $tabela = cns::all();
+?>
 
-<p class="text-center text-primary"><small>Ação</small></p>
+<?php $tabela = Cns::truncate(); ?>
+
+
+
+
+
+
+
+
+
+<p class="text-center text-primary"><small>Hospital</small></p>
 @endsection
