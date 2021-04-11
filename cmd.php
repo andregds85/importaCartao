@@ -41,6 +41,12 @@ CODIGO DO COVID
 
 
 
+DB::table('sensors')->truncate();
+
+
+
+
+
 Mapas dos Layouts
 
 Layouts         Principal

@@ -14,10 +14,14 @@
     <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Apagar</h2>
         </div>
         <p class="card-text">
-        <a class="nav-link" href="{{ url('') }}">Apagar Dados</a>
+
+
+
+
+
+
        </p>
    </div>
  </div>

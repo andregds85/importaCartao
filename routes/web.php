@@ -5,7 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CnsController;
-use App\Http\Controllers\DeleteController;
+use App\Http\Controllers\acaoController;
+use App\Http\Controllers\codigoController;
+
 
 
 Route::get('/', function () {
@@ -21,7 +23,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('cns', CnsController::class);
-    Route::resource('dados', DeleteController::class);
+    Route::resource('acao', acaoController::class);
+    Route::resource('codigo', codigoController::class);
 
 
 

@@ -43,10 +43,7 @@ class CnsController extends Controller
     }
    
 
-    public function show()
-    {
-        return view('cns.dados');
-    }
+
 
     public function edit(Macro $cns)
     {
