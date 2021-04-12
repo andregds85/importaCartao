@@ -53,70 +53,11 @@
             {!! Form::password('confirm-password', array('placeholder' => 'Confirm Password','class' => 'form-control')) !!}
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Grupo:</strong>
-            {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
-        </div>
-    </div>
- 
-</div>
-
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-                <label for="exampleInputCategoria">Hospital</label>
-                <select class="form-control" name="categorias_id" id="categoria">
-
-                <?php
-                    use App\Models\Categoria;
-                    $tabela = categoria::all();
-                ?>
-               <option value="Hospital Não Selecionado">Hospital Não Selecionado</option>
-                @foreach($tabela as $item)
-                <option value='{{$item->id}}' >{{$item->id}}{{$item->name}}</option>
-                @endforeach
-                </select>
-            </div>
-        </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-                <label for="exampleInputCategoria">Macro</label>
-                <select class="form-control" name="macro" id="categoria">
-
-                <?php
-                    use App\Models\macro;
-                    $tabela = macro::all();
-                ?>
-               <option value="Macro Não Selecionada">Macro Não Selecionada</option>
-
-                @foreach($tabela as $item)
-                <option value='{{$item->id}}' >{{$item->id}}{{$item->nome}}</option>
-                @endforeach
-
-                </select>
-            </div>
-        </div>
-</div>
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
-
 
 {!! Form::close() !!}
 
