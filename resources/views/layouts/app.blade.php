@@ -53,13 +53,54 @@
  <!-- Ler no Futuro colocar os endereços de imagem na nuvem pois perde o endereçamento se colocar em servidor local -->
 
 
-   
+   <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown user-menu">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                    <img src="img/avatar.png"
+                         class="user-image img-circle elevation-2" alt="User Image">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <!-- User image -->
+                    <li class="user-header bg-primary">
+                        <img src="img/avatar.png"
+                             class="img-circle elevation-2"
+                             alt="User Image">
+                        <p>
+                        </p>
+                    </li>
+                    <!-- Menu Footer-->
+                    <li class="user-footer">
+                        <a href="{{ route('login') }}" class="btn btn-default btn-flat">Login</a>
+
+                        <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                   <span class="caret"></span>
+                                </a>
+
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Sair') }}
+                                    </a>
+
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                              </div>
+                                         
+                 
+                  
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>
 
     <!-- Left side column. contains the logo and sidebar -->
-@include('layouts4.sidebar')
+@include('layouts.sidebar')
 
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -71,7 +112,7 @@
     <!-- Main Footer -->
     <footer class="main-footer">
        
-    <strong>Secretaria de Estado da Saúde  &copy; <?php echo '20'. $hoje=date('y'); ?> 
+        <strong>Secretaria de Estado da Saúde  &copy; <?php echo '20'. $hoje=date('y'); ?> 
     </footer>
 </div>
 
